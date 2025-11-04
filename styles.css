@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-group small {
+    display: block;
+    margin-top: 6px;
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+.results {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.results.hidden {
+    display: none;
+}
+
+.results h2 {
+    color: #2d3748;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.result-item.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+}
+
+.result-item.highlight .result-label,
+.result-item.highlight .result-value {
+    color: white;
+}
+
+.result-label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.result-value {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #2d3748;
+}
+
+.result-item.highlight .result-value {
+    font-size: 1.8rem;
+}
+
+.progress-section {
+    margin: 30px 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-weight: 600;
+    min-width: 0;
+}
+
+.info-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #edf2f7;
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+}
+
+.info-box p {
+    color: #4a5568;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .calculator-card {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .result-value {
+        font-size: 1.1rem;
+    }
+
+    .result-item.highlight .result-value {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRE Calculator - Financial Independence Retire Early</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 FIRE Calculator</h1>
+            <p class="subtitle">Calculate Your Path to Financial Independence</p>
+        </header>
+
+        <div class="calculator-card">
+            <form id="fireForm">
+                <div class="input-group">
+                    <label for="annualExpenses">Annual Expenses ($)</label>
+                    <input type="number" id="annualExpenses" placeholder="e.g., 40000" required min="0" step="1000">
+                    <small>How much do you spend per year?</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="currentSavings">Current Savings ($)</label>
+                    <input type="number" id="currentSavings" placeholder="e.g., 50000" required min="0" step="1000">
+                    <small>Your total savings and investments</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="annualSavings">Annual Savings ($)</label>
+                    <input type="number" id="annualSavings" placeholder="e.g., 20000" required min="0" step="1000">
+                    <small>How much can you save per year?</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="returnRate">Expected Annual Return (%)</label>
+                    <input type="number" id="returnRate" placeholder="e.g., 7" required min="0" max="20" step="0.1" value="7">
+                    <small>Expected investment return rate (typically 5-8%)</small>
+                </div>
+
+                <div class="input-group">
+                    <label for="withdrawalRate">Safe Withdrawal Rate (%)</label>
+                    <input type="number" id="withdrawalRate" placeholder="e.g., 4" required min="0" max="10" step="0.1" value="4">
+                    <small>The 4% rule is commonly used</small>
+                </div>
+
+                <button type="submit" class="calculate-btn">Calculate FIRE Number</button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <h2>Your FIRE Plan</h2>
+
+                <div class="result-item highlight">
+                    <div class="result-label">FIRE Number (Target Portfolio)</div>
+                    <div class="result-value" id="fireNumber">$0</div>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-label">Years to FIRE</div>
+                    <div class="result-value" id="yearsToFire">0</div>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-label">FIRE Date</div>
+                    <div class="result-value" id="fireDate">-</div>
+                </div>
+
+                <div class="result-item">
+                    <div class="result-label">Monthly Passive Income</div>
+                    <div class="result-value" id="monthlyIncome">$0</div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-label">
+                        <span>Progress to FIRE</span>
+                        <span id="progressPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Note:</strong> This calculator uses the traditional FIRE formula where your target portfolio = Annual Expenses ÷ Safe Withdrawal Rate. The 4% rule suggests you can withdraw 4% of your portfolio annually in retirement.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with ❤️ for the FIRE community</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
