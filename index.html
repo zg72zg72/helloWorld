@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FIRE Calculator - Financial Independence Retire Early</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -78,6 +79,13 @@
                     </div>
                     <div class="progress-bar">
                         <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+
+                <div class="chart-section">
+                    <h3>Portfolio Growth Projection</h3>
+                    <div class="chart-container">
+                        <canvas id="portfolioChart"></canvas>
                     </div>
                 </div>
 
